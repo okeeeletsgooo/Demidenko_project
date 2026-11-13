@@ -1,26 +1,31 @@
 """Ввести N чисел. Посчитать и вывести количество чисел равных нулю."""
 
-while True:
+n = input('Введите количество чисел N:')
+while type(n) != int:
     try:
-        N = int(input("Введите количество чисел: "))
-        if N > 0:
-            break
-        else:
-            print("Ошибка! N должно быть больше 0.")
+        n = int(n)
+        if n <= 0:
+            print('Количество чисел должно быть больше 0')
+            n = input('Введите количество чисел N:')
     except ValueError:
-        print("Ошибка! Введите целое число.")
+        print('Неправильно!')
+        n = input('Введите количество чисел N:')
 
-K = 0
+a = 0
+i = 1
 
-for I in range(N):
-    while True:
+while i <= n:
+    num = input(f"Введите число {i}:")
+
+    while type(num) != int:
         try:
-            A = float(input("Введите число: "))
-            break
+            num = int(num)
         except ValueError:
-            print("Ошибка! Введите число.")
+            print('Неправильно!')
+            num = input(f"Введите число {i}:")
 
-    if A == 0:
-        K = K + 1
+    if num == 0:
+        a += 1
 
-print("Количество нулей:", K)
+    i += 1
+print('Количество чисел равных нулю:', a)

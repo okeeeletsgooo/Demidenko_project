@@ -13,15 +13,18 @@ while True:
 A = 0
 B = 1
 K = 0
+I = 0
 
-for I in range(N):
+while I < N:
     print(A)
 
     if A % 2 == 0:
-        K = K + 1
+        K += 1
 
     C = A + B
     A = B
     B = C
+    I += 1
 
+print("Количество чётных:", K)
 print("Количество четных чисел:", K)

@@ -4,7 +4,7 @@
 
 while True:
     try:
-        N = int(input("Введите количество элементов: "))
+        N = int(input("Введите N: "))
         if N > 0:
             break
         else:
@@ -13,8 +13,11 @@ while True:
         print("Ошибка! Введите целое число.")
 
 A = 1
+I = 0
 
-for I in range(N):
-    B = round(A / 2)
+while I < N:
+    B = int(A / 2 + 0.5)
     print(B)
-    A = A + 3
+
+    A += 3
+    I += 1

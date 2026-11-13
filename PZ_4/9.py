@@ -6,6 +6,7 @@ while True:
         A = float(input("Введите первый элемент: "))
         D = float(input("Введите разность: "))
         N = int(input("Введите количество элементов: "))
+
         if N > 0:
             break
         else:
@@ -14,10 +15,13 @@ while True:
         print("Ошибка! Введите правильные данные.")
 
 K = 0
+I = 0
 
-for I in range(N):
+while I < N:
     if A > 10 and A < 30:
-        K = K + 1
-    A = A + D
+        K += 1
+
+    A += D
+    I += 1
 
 print("Количество элементов:", K)
